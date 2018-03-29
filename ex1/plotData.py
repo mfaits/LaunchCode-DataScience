@@ -19,5 +19,9 @@ def plotData(data):
 #       markers larger by using plot(..., 'rx', 'MarkerSize', 10);
 
     plt.figure()  # open a new figure window
+    plt.scatter(data[:,0], data[:,1], marker='x',color='red')
+    plt.xlabel('Population')
+    plt.ylabel('Revenue')
+    
 
 # ============================================================

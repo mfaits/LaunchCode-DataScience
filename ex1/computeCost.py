@@ -11,7 +11,9 @@ def computeCost(X, y, theta):
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the cost of a particular choice of theta
 #               You should set J to the cost.
-
+    step1 = np.power(((np.dot(X,theta))-y),2)
+    step2 = sum(step1)
+    J = step2/(2*m)
 
 # =========================================================================
 

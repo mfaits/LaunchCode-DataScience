@@ -37,6 +37,7 @@ from show import show
 
 # ==================== Part 1: Basic Function ====================
 # Complete warmUpExercise.py
+#Completed
 print('Running warmUpExercise ...')
 print('5x5 Identity Matrix:')
 warmup = warmUpExercise()
@@ -44,6 +45,7 @@ print(warmup)
 input("Program paused. Press Enter to continue...")
 
 # ======================= Part 2: Plotting =======================
+#Completed
 data = np.loadtxt('ex1data1.txt', delimiter=',')
 m = data.shape[0]
 X = np.vstack(zip(np.ones(m),data[:,0]))
