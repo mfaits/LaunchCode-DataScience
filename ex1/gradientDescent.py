@@ -1,4 +1,5 @@
 from computeCost import computeCost
+import numpy as np
 
 
 def gradientDescent(X, y, theta, alpha, num_iters):
@@ -20,7 +21,8 @@ def gradientDescent(X, y, theta, alpha, num_iters):
         # Hint: While debugging, it can be useful to print out the values
         #       of the cost function (computeCost) and gradient here.
         #
-        tempt0 = theta[0] - alpha*(sum((np.dot(X,theta)-y))/m)
+        tempt0 = theta[0] - (alpha/m)*sum(np.dot((np.dot(X,theta)-y),X[:,0]))
+        tempt1 = theta[1] - alpha*(sum((np.dot(X,theta)-y))/m)
 
         # ============================================================
 
