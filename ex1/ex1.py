@@ -9,7 +9,7 @@ from gradientDescent import gradientDescent
 from computeCost import computeCost
 from warmUpExercise import warmUpExercise
 from plotData import plotData
-from show import show
+#from show import show
 
 ## Machine Learning Online Class - Exercise 1: Linear Regression
 
@@ -55,7 +55,7 @@ y = data[:, 1]
 # Note: You have to complete the code in plotData.py
 print('Plotting Data ...')
 plotData(data)
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
@@ -83,7 +83,7 @@ plt.figure()
 plotData(data)
 plt.plot(X[:, 1], X.dot(theta), '-', label='Linear regression')
 plt.legend(loc='upper right', shadow=True, fontsize='x-large', numpoints=1)
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
@@ -123,7 +123,7 @@ ax.plot_surface(theta0_vals, theta1_vals, J_vals, rstride=8, cstride=8, alpha=0.
 ax.set_xlabel(r'$\theta_0$')
 ax.set_ylabel(r'$\theta_1$')
 ax.set_zlabel(r'J($\theta$)')
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
@@ -136,7 +136,7 @@ plt.clabel(ax, inline=1, fontsize=10)
 plt.xlabel(r'$\theta_0$')
 plt.ylabel(r'$\theta_1$')
 plt.plot(0.0, 0.0, 'rx', linewidth=2, markersize=10)
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
@@ -156,7 +156,7 @@ plt.figure()
 plotData(data)
 plt.plot(X[:, 1],  X.dot(regr.coef_), '-', color='black', label='Linear regression wit scikit')
 plt.legend(loc='upper right', shadow=True, fontsize='x-large', numpoints=1)
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
