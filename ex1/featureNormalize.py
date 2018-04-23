@@ -29,7 +29,8 @@ def featureNormalize(X):
     #
     # Hint: You might find the 'mean' and 'std' functions useful.
     #
-    for i in range(0, (np.size(X,1)-1)):
+    #for i in range(0, (np.size(X,1)-1)):
+    for i in range(np.size(X,1)):
       mu[i] = np.mean(X[:,i])
       sigma[i] = np.std(X[:,i])  
       X_norm[:,i] = X_norm[:,i] - mu[i]

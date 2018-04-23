@@ -62,7 +62,7 @@ print('Running gradient descent ...')
 
 # Choose some alpha value
 alpha = 0.01
-num_iters = 400
+num_iters = 1200
 
 # Init Theta and Run Gradient Descent 
 theta = np.zeros(3)
@@ -80,7 +80,12 @@ print('Theta computed from gradient descent: ')
 print(theta)
 
 # Estimate the price of a 1650 sq-ft, 3 br house
-price = np.array([1,1650,3]).dot(theta)
+#mu = np.concatenate(([1], mu), axis=0)
+
+priceArray = np.array([1650,3])
+NormalizedPriceArray = (priceArray - mu)/sigma 
+NormalizedPriceArray = np.concatenate(([1],NormalizedPriceArray),axis=0)
+price = np.dot(NormalizedPriceArray,theta)
 
 print('Predicted price of a 1650 sq-ft, 3 br house')
 print('(using gradient descent): ')
@@ -119,7 +124,7 @@ print('Theta computed from the normal equations:')
 print(' %s \n' % theta)
 
 # Estimate the price of a 1650 sq-ft, 3 br house
-price = np.array([1, 3, 1650]).dot(theta)
+price = np.array([1, 1650, 3]).dot(theta)
 
 # ============================================================
 

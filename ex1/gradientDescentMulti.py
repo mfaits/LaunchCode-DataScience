@@ -23,7 +23,7 @@ def gradientDescentMulti(X, y, theta, alpha, num_iters):
         #
         innerTerm = np.dot(X,theta)-y
         
-        for j in range(0,(np.size(X,1)-1)):
+        for j in range(np.size(X,1)):
             temptheta[j] = theta[j] - (alpha/m)*sum(innerTerm*X[:,j])
         
         theta = temptheta.copy()
