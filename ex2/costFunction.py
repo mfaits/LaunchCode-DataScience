@@ -1,4 +1,5 @@
-from numpy import log
+#from numpy import log
+import numpy as np
 from sigmoid import sigmoid
 
 def costFunction(theta, X,y):
@@ -18,6 +19,10 @@ def costFunction(theta, X,y):
 #
 # Note: grad should have the same dimensions as theta
 #
-    J = 0
-    
+
+
+    step1 = np.dot(-y, np.log(sigmoid(np.dot(X,np.transpose(theta)))))
+    step2 = np.dot((1-y), np.log(1-sigmoid(np.dot(X,np.transpose(theta)))))
+
+    J = np.sum(step1 - step2) / m
     return J

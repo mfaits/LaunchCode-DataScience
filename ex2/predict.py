@@ -1,5 +1,5 @@
-from numpy import round
-
+#from numpy import round
+import numpy as np
 from sigmoid import sigmoid
 
 
@@ -17,6 +17,6 @@ def predict(theta, X):
 
 
 # =========================================================================
-
-    p = 0
+    predictionArray = sigmoid(np.dot(X,theta))
+    p = np.round(predictionArray)
     return p
