@@ -9,9 +9,10 @@ from scipy.optimize import minimize
 import pandas as pd
 
 from ml import mapFeature, plotData, plotDecisionBoundary
-from show import show
+#from show import show
 from costFunctionReg import costFunctionReg
 from gradientFunctionReg import gradientFunctionReg
+#from gradientFunction import gradientFunction
 from sigmoid import sigmoid
 
 
@@ -32,7 +33,7 @@ def plotBoundary(theta, X, y):
     # Labels and Legend
     plt.xlabel('Microchip Test 1')
     plt.ylabel('Microchip Test 2')
-    show()
+    plt.show()
 
 
 
@@ -51,7 +52,7 @@ plotData(X.values, y.values)
 # Labels and Legend
 plt.xlabel('Microchip Test 1')
 plt.ylabel('Microchip Test 2')
-show()
+plt.show()
 input("Program paused. Press Enter to continue...")
 
 
