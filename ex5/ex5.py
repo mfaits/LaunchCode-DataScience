@@ -112,8 +112,7 @@ input("Program paused. Press Enter to continue...")
 #
 
 Lambda = 0
-error_train, error_val = learningCurve(np.column_stack((np.ones(m), X)), y,
-                                       np.column_stack((np.ones(Xval.shape[0]), Xval)), yval, Lambda)
+error_train, error_val = learningCurve(np.column_stack((np.ones(m), X)), y, np.column_stack((np.ones(Xval.shape[0]), Xval)), yval, Lambda)
 plt.figure()
 plt.plot(range(m), error_train, color='b', lw=0.5, label='Train')
 plt.plot(range(m), error_val, color='r', lw=0.5, label='Cross Validation')

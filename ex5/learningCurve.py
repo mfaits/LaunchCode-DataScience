@@ -17,6 +17,7 @@ def learningCurve(X, y, Xval, yval, Lambda):
 
 # Number of training examples
     m, _ = X.shape
+    n = m-1
 
 # You need to return these values correctly
     error_train = np.zeros(m)
@@ -50,6 +51,13 @@ def learningCurve(X, y, Xval, yval, Lambda):
 #           ....
 #           
 #       end
+    
+    for i in range (0, n):
+        train_subset = X[0:n]
+        y_subset = y[0:n]
+        fit_theta = trainLinearReg(train_subset, y_subset, Lambda)
+        error_train[i] = (linearRegCostFunction(fit_theta,train_subset,y_subset,Lambda))
+        error_val[i] = (linearRegCostFunction(fit_theta,Xval,yval,Lambda))
 #
 
 # ---------------------- Sample Solution ----------------------
