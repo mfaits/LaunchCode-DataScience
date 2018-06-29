@@ -8,7 +8,7 @@ from estimateGaussian import estimateGaussian
 from selectThreshold import selectThreshold
 from multivariateGaussian import multivariateGaussian
 from visualizeFit import visualizeFit
-from show import show
+#from show import show
 
 ## Machine Learning Online Class
 #  Exercise 8 | Anomaly Detection and Collaborative Filtering
@@ -50,7 +50,7 @@ plt.plot(X[:, 0], X[:, 1], 'bx')
 plt.axis([0, 30, 0, 30])
 plt.xlabel('Latency (ms)')
 plt.ylabel('Throughput (mb/s)')
-show()
+plt.show()
 input("Program paused. Press Enter to continue...")  
 
 
@@ -75,7 +75,7 @@ p = multivariateGaussian(X, mu, sigma2)
 visualizeFit(X,  mu, sigma2)
 plt.xlabel('Latency (ms)')
 plt.ylabel('Throughput (mb/s)')
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")  
 
@@ -96,7 +96,7 @@ outliers = np.where(p < epsilon, True, False)
 
 #  Draw a red circle around those outliers
 plt.plot(X[outliers, 0], X[outliers, 1], 'ro', lw=2, markersize=10, fillstyle='none', markeredgewidth=1)
-show()
+plt.show()
 
 input("Program paused. Press Enter to continue...")
 
